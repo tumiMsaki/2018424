@@ -6,7 +6,7 @@ var url = require('url');
 var path = require('path');
 
 http.createServer(function(req, res) {
-    if (req.url != '/favicon.ico') {
+    if (req.url !== '/favicon.ico') {
         var index = req.url.lastIndexOf('.');
         var contentType = req.url.substr(index + 1);
         console.log(contentType);
@@ -50,7 +50,7 @@ http.createServer(function(req, res) {
                 res.end('success');
             });
         }
-        if (req.url != '/upload') {
+        if (req.url !== '/upload') {
             var filePath = path.join(__dirname, req.url);
             res.writeHead(200, { "Content-Type": contentType, 'charset': 'utf-8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'PUT,POST,GET,DELETE,OPTIONS' });
             var readStream = fs.createReadStream(filePath);
