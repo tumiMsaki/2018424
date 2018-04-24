@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+    <form id="form" enctype="multipart/form-data">
+        <div id="img-prev-container">
+            <img class="img" alt="请上传图片">
+        </div>
+        <progress id="progressBar" value="0" max="100"></progress><span id="percentage">0</span>
+        <input type="file" name="img" id="uploadFile" accept="image/*"><br><br>
+        <input type="button" value="上" id="btn">
+    </form>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>
